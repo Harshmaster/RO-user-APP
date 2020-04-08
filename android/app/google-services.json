@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "956126051849",
+    "firebase_url": "https://ro-system-9e79b.firebaseio.com",
+    "project_id": "ro-system-9e79b",
+    "storage_bucket": "ro-system-9e79b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956126051849:android:63b9afa45f7240584a42d8",
+        "android_client_info": {
+          "package_name": "com.example.ROSYSTEMUSER"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956126051849-b6en3i2e9bublhgvunq2mipmmp80e2d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9SNOGZsze25hzRyLG6Fz_BJD3uk7ICbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956126051849-b6en3i2e9bublhgvunq2mipmmp80e2d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956126051849:android:06e3863bac1441574a42d8",
+        "android_client_info": {
+          "package_name": "com.example.ROSystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956126051849-b6en3i2e9bublhgvunq2mipmmp80e2d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9SNOGZsze25hzRyLG6Fz_BJD3uk7ICbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956126051849-b6en3i2e9bublhgvunq2mipmmp80e2d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
