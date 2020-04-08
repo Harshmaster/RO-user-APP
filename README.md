@@ -4,7 +4,7 @@ This project is a User App made for a an organization dealing in Water Purificat
 It helps the employees of the firm to maintain and keep record of their clients and their service status. 
 
 ## Screenshots 
-![](Screenshots/AddNew1.jpeg)
+- ![](Screenshots/AddNew1.jpeg)
 
 ## Prerequisites
 
