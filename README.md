@@ -3,6 +3,9 @@
 This project is a User App made for a an organization dealing in Water Purification System.
 It helps the employees of the firm to maintain and keep record of their clients and their service status. 
 
+## Screenshots 
+![](AddNew1.jpeg)
+
 ## Prerequisites
 
 - Flutter SDK should be installed on the system.
