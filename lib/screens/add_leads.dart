@@ -8,6 +8,10 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:geolocation/geolocation.dart';
+import 'package:flutter_map/plugin_api.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong/latlong.dart';
 
 class AddLeads extends StatefulWidget {
   static const routeName = '/ADDLEADS';
@@ -16,6 +20,40 @@ class AddLeads extends StatefulWidget {
 }
 
 class _AddLeadsState extends State<AddLeads> {
+  MapController controller = MapController();
+  double latitude;
+  double longitude;
+
+  getPermission() async {
+    final GeolocationResult result =
+        await Geolocation.requestLocationPermission(
+            permission: const LocationPermission(
+                android: LocationPermissionAndroid.fine,
+                ios: LocationPermissionIOS.always));
+    return result;
+  }
+
+  getLocation() async {
+    return getPermission().then((result) async {
+      if (result.isSuccessful) {
+        final coords =
+            Geolocation.currentLocation(accuracy: LocationAccuracy.best);
+        return coords;
+      } else {
+        return null;
+      }
+    });
+  }
+
+  buildMap() async {
+    await getLocation().then((response) {
+      response.listen((value) {
+        latitude = value.location.latitude;
+        longitude = value.location.longitude;
+      });
+    });
+  }
+
   final areaController = TextEditingController();
   final priceController = TextEditingController();
   final noteController = TextEditingController();
@@ -49,6 +87,8 @@ class _AddLeadsState extends State<AddLeads> {
       "_visitingImageUrl": _visitingImageUrl,
       "lead_id": uuid,
       "_picImageUrl": _picImageUrl,
+      "latitude":latitude,
+      "longitude":longitude,
     });
   }
 
@@ -292,7 +332,11 @@ class _AddLeadsState extends State<AddLeads> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  onPressed: () {},
+                  onPressed: () async {
+                    await buildMap();
+                    print(latitude);
+                    print(longitude);
+                  },
                 ),
               ),
               Container(

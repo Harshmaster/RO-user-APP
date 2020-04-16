@@ -1,10 +1,16 @@
 # Introduction
 
 This project is a User App made for a an organization dealing in Water Purification System.
-It helps the employees of the firm to maintain and keep record of their clients and their service status. 
+It helps the employees of the firm to maintain and keep record of their clients and their service status. Database used with the App is Firestore and authentication is done by manipulating Shared Preferences. For Storing images uploaded by the user Firebase Cloud Storage is used.
 
 ## Screenshots 
-- ![](Screenshots/AddNew1.jpeg)
+<span>
+<img src="Screenshots/AddNew1.jpeg" width="200"/>
+<img src="Screenshots/AddNew1.jpeg" width="200"/>
+<img src="Screenshots/BusinessType.jpeg" width="200"/>
+<img src="Screenshots/LoginScreen.jpeg" width="200"/>
+<img src="Screenshots/ViewData.jpeg" width="200"/>
+</span>
 
 ## Prerequisites
 

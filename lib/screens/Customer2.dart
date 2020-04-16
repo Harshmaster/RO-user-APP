@@ -1,5 +1,7 @@
+
+import 'package:USERAPPRO/widgets/ViewTopCustomerData.dart';
+
 import '../screens/EditClient.dart';
-import '../widgets/ViewData.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -100,7 +102,7 @@ class _Customer2State extends State<Customer2> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (BuildContext context) =>
-                                            ViewData(
+                                            ViewTopCustomerData(
                                               docId: snapshot
                                                   .data
                                                   .documents[index]

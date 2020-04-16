@@ -1,7 +1,6 @@
 import 'package:USERAPPRO/screens/home_login_page.dart';
 import 'package:USERAPPRO/screens/postBTheads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-// import '../screens/BTheads.dart';
 import '../screens/add_leads.dart';
 import '../screens/profile_page1.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
