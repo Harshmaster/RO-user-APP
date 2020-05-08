@@ -1,6 +1,5 @@
 import './screens/home_login_page.dart';
 import './screens/profile_page1.dart';
-
 import 'package:flutter/material.dart';
 import './screens/editDetails.dart';
 import './screens/leads.dart';
@@ -12,9 +11,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
-  
-  @override
+@override
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
@@ -24,11 +21,9 @@ class MyApp extends StatelessWidget {
         Leads.routeName:(ctx) => Leads(),
         AddLeads.routeName:(ctx) => AddLeads(),
         CompleteLead.routeName:(ctx) => CompleteLead(),
-
       },
-      home: MyHomeLogin(),
+      home: Leads(id: '9871511555',),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-

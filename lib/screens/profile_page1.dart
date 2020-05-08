@@ -12,10 +12,11 @@ class ProfilePage1 extends StatefulWidget {
 }
 
 class _ProfilePage1State extends State<ProfilePage1> {
+
   String mobile = '';
-  String address = '';
+  String address = ''; 
   String password = '';
-  String bankdetails;
+  String bankdetails = '';    
   String email = '';
   String name = '';
   String _imgLink = '';
@@ -26,7 +27,7 @@ class _ProfilePage1State extends State<ProfilePage1> {
     print(sharedMobile);
     await Firestore.instance
         .collection("Users")
-        .where("Mobile", isEqualTo: sharedMobile)
+        .where("Mobile", isEqualTo:"9871615")
         .getDocuments()
         .then((QuerySnapshot docs) {
       if (docs.documents.isEmpty) {
@@ -40,12 +41,12 @@ class _ProfilePage1State extends State<ProfilePage1> {
         address = docs.documents[0].data["Address"];
         _imgLink = docs.documents[0].data["_imgLink"];
         bankdetails = docs.documents[0].data["Bank Details"];
-        
       });
     });
   }
 
   getSharedData() async {
+
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getString("sharedMobile").toString();
   }
@@ -60,7 +61,7 @@ class _ProfilePage1State extends State<ProfilePage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: bankdetails != null
+        body: mobile != null
             ? SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
